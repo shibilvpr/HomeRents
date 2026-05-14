@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MAIN BACKGROUND */
+.home-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  /* background: #f6eee0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD (FULL WIDTH FIX) */
+.main-card {
+  width: 1000px;            
+  height: 450px;          
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  /* background: #000000; */
+  
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+/* TEXT SIDE (40%) */
+.card-text {
+  width: 40%;               /* ✅ EXACT 40% */
+  background: #0c0b0b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+}
+
+/* TITLE */
+.card-text h1 {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+/* SUBTITLE */
+.card-text p {
+  margin-top: 15px;
+  color: #9aa0aa;
+  font-size: 16px;
+}
+
+/* IMAGE SIDE (60%) */
+.card-image {
+  width: 60%;               /* ✅ EXACT 60% */
+  position: relative;
+}
+
+/* IMAGE */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK GRADIENT OVER IMAGE */
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+}
+
+/* TABS */
+.tabs {
+  margin-top: 40px;
+  display: flex;
+  gap: 60px;
+}
+
+/* TAB STYLE */
+.tab {
+  color: #6f7685;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* ACTIVE */
+.tab.active {
+  color: #ff4d4d;
+}
+
+/* UNDERLINE */
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ff4d4d;
+  transition: 0.3s;
+}
+
+.tab.active::after {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .main-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-text,
+  .card-image {
+    width: 100%;
+  }
+
+  .card-image {
+    height: 250px;
+  }
+
+  .card-text {
+    padding: 30px;
+  }
+
+  .card-text h1 {
+    font-size: 32px;
+  }
+}

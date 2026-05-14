@@ -1,0 +1,115 @@
+/* ===== FULL SCREEN BACKGROUND ===== */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top, #111827, #020617);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+  width: 360px;
+  padding: 35px 30px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+/* subtle hover lift */
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== TITLE ===== */
+.login-box h2 {
+  color: #f9fafb;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* ===== INPUT WRAPPER ===== */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== INPUT STYLE ===== */
+.login-box input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* placeholder */
+.login-box input::placeholder {
+  color: #9ca3af;
+}
+
+/* focus glow */
+.login-box input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 2px #38bdf8;
+}
+
+/* ===== BUTTON ===== */
+.login-box button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.login-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* click effect */
+.login-box button:active {
+  transform: scale(0.98);
+}
+
+/* ===== SIGNUP TEXT ===== */
+.login-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* link */
+.login-box a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+/* hover link */
+.login-box a:hover {
+  text-decoration: underline;
+}

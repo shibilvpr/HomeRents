@@ -1,0 +1,279 @@
+/* ===================================
+   PAGE
+=================================== */
+
+.admin-users-table-page {
+  min-height: 100vh;
+  background: #000;
+  padding: 40px;
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.admin-users-main-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ===================================
+   MESSAGE
+=================================== */
+
+.admin-users-message-text {
+  color: #9f9f9f;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* ERROR */
+
+.admin-users-error-text {
+  color: #fff;
+  background: #111;
+  border: 1px solid #333;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ===================================
+   TABLE WRAPPER
+=================================== */
+
+.admin-users-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid #222;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+/* TABLE HEADER */
+
+.admin-users-table thead {
+  background: #fff;
+}
+
+.admin-users-table thead th {
+  color: #000;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* TABLE BODY */
+
+.admin-users-table tbody tr {
+  background: #0d0d0d;
+  border-bottom: 1px solid #1f1f1f;
+  transition: 0.3s ease;
+}
+
+.admin-users-table tbody tr:hover {
+  background: #151515;
+}
+
+.admin-users-table td {
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* ===================================
+   IMAGE
+=================================== */
+
+.admin-user-profile-image {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* ===================================
+   TEXT
+=================================== */
+
+.admin-user-name {
+  font-weight: 700;
+}
+
+.admin-user-email {
+  color: #b5b5b5;
+}
+
+/* ===================================
+   STATUS
+=================================== */
+
+.admin-user-status {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ACTIVE */
+
+.admin-user-active {
+  background: #fff;
+  color: #000;
+}
+
+/* BLOCKED */
+
+.admin-user-blocked {
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.admin-user-action-btn {
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* BLOCK BUTTON */
+
+.admin-user-block-btn {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.admin-user-block-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* UNBLOCK BUTTON */
+
+.admin-user-unblock-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.admin-user-unblock-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===================================
+   LIGHT MODE
+=================================== */
+
+body.light-mode .admin-users-table-page {
+  background: #f5f5f5;
+}
+
+body.light-mode .admin-users-main-title {
+  color: #000;
+}
+
+body.light-mode .admin-users-message-text {
+  color: #555;
+}
+
+body.light-mode .admin-users-error-text {
+  background: #fff;
+  color: #000;
+  border: 1px solid #dcdcdc;
+}
+
+body.light-mode .admin-users-table-wrapper {
+  border: 1px solid #dcdcdc;
+}
+
+body.light-mode .admin-users-table tbody tr {
+  background: #fff;
+}
+
+body.light-mode .admin-users-table tbody tr:hover {
+  background: #f1f1f1;
+}
+
+body.light-mode .admin-users-table td {
+  color: #000;
+}
+
+body.light-mode .admin-user-email {
+  color: #555;
+}
+
+body.light-mode .admin-user-profile-image {
+  border: 2px solid #000;
+}
+
+body.light-mode .admin-user-active {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .admin-user-blocked {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.light-mode .admin-user-block-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+body.light-mode .admin-user-block-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+body.light-mode .admin-user-unblock-btn {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.light-mode .admin-user-unblock-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+  .admin-users-table-page {
+    padding: 20px;
+  }
+
+  .admin-users-main-title {
+    font-size: 28px;
+  }
+}

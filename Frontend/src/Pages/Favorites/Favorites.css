@@ -1,0 +1,168 @@
+/* ===== PAGE ===== */
+.fav-container {
+  padding: 40px;
+  background:#f5f7fa;
+  min-height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== TITLE ===== */
+.fav-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+/* ===== STATE ===== */
+.state {
+  text-align: center;
+  margin-top: 20px;
+  color: #94a3b8;
+}
+
+.state.error {
+  color: #ef4444;
+}
+
+/* ===== GRID (3 CARDS PER ROW) ===== */
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ✅ 3 cards */
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.fav-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.35s ease;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.fav-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+}
+
+/* ===== IMAGE ===== */
+.fav-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.fav-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.fav-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== CONTENT ===== */
+.fav-content {
+  padding: 15px;
+}
+
+.fav-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #f8fafc;
+}
+
+/* CATEGORY */
+.category {
+  font-size: 13px;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+/* PRICE */
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+/* ===== DESCRIPTION ===== */
+.description {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* ===== BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* COMMON BUTTON */
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* VIEW */
+.btn.view {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.btn.view:hover {
+  background: #0ea5e9;
+}
+
+/* CONTACT */
+.btn.cart {
+  background: #22c55e;
+  color: white;
+}
+
+.btn.cart:hover {
+  background: #16a34a;
+}
+
+/* REMOVE LINK STYLE */
+.btn a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .fav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .fav-grid {
+    grid-template-columns: 1fr;
+  }
+}

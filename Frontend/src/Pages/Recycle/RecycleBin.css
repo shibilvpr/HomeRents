@@ -1,0 +1,214 @@
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.recycle-page-layout {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.recycle-main-section {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  padding: 35px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.recycle-page-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   LOADING & EMPTY
+========================= */
+
+.recycle-loading-text,
+.recycle-empty-text {
+  font-size: 16px;
+  color: #9f9f9f;
+  margin-top: 20px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.deleted-products-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
+  gap: 24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.deleted-product-card {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 22px;
+  padding: 18px;
+  transition: 0.3s ease;
+}
+
+.deleted-product-card:hover {
+  transform: translateY(-6px);
+  border-color: #fff;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.deleted-product-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   PRODUCT NAME
+========================= */
+
+.deleted-product-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.deleted-product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.deleted-product-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* RESTORE BUTTON */
+
+.restore-product-btn {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.restore-product-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* DELETE BUTTON */
+
+.delete-product-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.delete-product-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode .recycle-page-layout {
+  background: #fff;
+}
+
+body.light-mode .recycle-main-section {
+  color: #000;
+}
+
+body.light-mode .deleted-product-card {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+}
+
+body.light-mode .deleted-product-name {
+  color: #000;
+}
+
+body.light-mode .deleted-product-image {
+  border: 1px solid #dcdcdc;
+}
+
+body.light-mode .recycle-loading-text,
+body.light-mode .recycle-empty-text {
+  color: #555;
+}
+
+body.light-mode .restore-product-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+body.light-mode .restore-product-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+body.light-mode .delete-product-btn {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.light-mode .delete-product-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .recycle-main-section {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .deleted-product-actions {
+    flex-direction: column;
+  }
+
+  .recycle-page-title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,278 @@
+/* ===================================
+   MAIN PAGE
+=================================== */
+
+.admin-listings {
+  min-height: 100vh;
+  background: #000;
+  padding: 40px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.admin-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* ===================================
+   EMPTY
+=================================== */
+
+.empty {
+  text-align: center;
+  color: #8f8f8f;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+/* ===================================
+   TABLE WRAPPER
+=================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid #222;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.listing-table thead {
+  background: #fff;
+}
+
+.listing-table th {
+  color: #000;
+  padding: 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+.listing-table tbody tr {
+  background: #0d0d0d;
+  border-bottom: 1px solid #1f1f1f;
+  transition: 0.3s ease;
+}
+
+.listing-table tbody tr:hover {
+  background: #151515;
+}
+
+.listing-table td {
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* ===================================
+   IMAGE
+=================================== */
+
+.listing-img {
+  width: 75px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+
+/* ===================================
+   STATUS
+=================================== */
+
+.status {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  background: #111;
+  color: #fff;
+}
+
+/* APPROVED */
+
+.status.approved {
+  background: #fff;
+  color: #000;
+}
+
+/* REJECTED */
+
+.status.rejected {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* PENDING */
+
+.status.pending {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* ===================================
+   ACTIONS
+=================================== */
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s ease;
+  border: 1px solid #fff;
+}
+
+/* SAME STYLE FOR ALL BUTTONS */
+
+.btn.approve,
+.btn.reject,
+.btn.delete {
+  background: #fff;
+  color: #000;
+}
+
+/* HOVER */
+
+.btn.approve:hover,
+.btn.reject:hover,
+.btn.delete:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===================================
+   LIGHT MODE
+=================================== */
+
+body.light-mode .admin-listings {
+  background: #f5f5f5;
+}
+
+body.light-mode .admin-title {
+  color: #000;
+}
+
+body.light-mode .empty {
+  color: #555;
+}
+
+body.light-mode .table-wrapper {
+  border: 1px solid #dcdcdc;
+}
+
+body.light-mode .listing-table tbody tr {
+  background: #fff;
+}
+
+body.light-mode .listing-table tbody tr:hover {
+  background: #f1f1f1;
+}
+
+body.light-mode .listing-table td {
+  color: #000;
+}
+
+body.light-mode .listing-img {
+  border: 2px solid #000;
+}
+
+body.light-mode .status {
+  border: 1px solid #000;
+}
+
+body.light-mode .status.approved {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .status.rejected {
+  background: #fff;
+  color: #000;
+}
+
+body.light-mode .status.pending {
+  background: #dcdcdc;
+  color: #000;
+}
+
+body.light-mode .btn.approve,
+body.light-mode .btn.reject,
+body.light-mode .btn.delete {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+body.light-mode .btn.approve:hover,
+body.light-mode .btn.reject:hover,
+body.light-mode .btn.delete:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+  .admin-listings {
+    padding: 20px;
+  }
+
+  .admin-title {
+    font-size: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

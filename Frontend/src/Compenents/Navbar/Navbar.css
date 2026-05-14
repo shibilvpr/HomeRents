@@ -1,0 +1,115 @@
+
+/* ================= WRAPPER ================= */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  z-index: 100;
+}
+.navbar {
+  min-height: 60px;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  /* ✅ ADD THIS */
+  padding: 0 35px;
+
+  border-radius: 60px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* FLOAT EFFECT */
+.navbar:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= LINKS ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  /* ✅ reduce gap slightly */
+  gap: 35px;
+
+  list-style: none;
+  margin: 0;
+
+  /* ✅ IMPORTANT */
+  padding: 10px 5px;
+}
+
+.nav-links li {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+
+  /* ✅ ADD THIS */
+  padding: 8px 4px;
+
+  position: relative;
+}
+/* HOVER */
+.nav-links li:hover {
+  color: #888383;
+}
+
+/* ACTIVE */
+.nav-links li.active {
+  color: #000000;
+  font-weight: 500;
+}
+
+/* UNDERLINE */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #7c4dff;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.nav-links li:hover::after,
+.nav-links li.active::after {
+  width: 100%;
+}
+
+.nav-btn {
+  border-radius: 10px;
+  width: 70px;
+  height: 30px;
+  background-color: rgb(255, 21, 0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 50px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li {
+    font-size: 13px;
+  }
+}

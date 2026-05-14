@@ -1,0 +1,604 @@
+/* =======================================
+GLOBAL
+======================================= */
+
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+} */
+
+body{
+  background:#f5f7fa;
+  overflow-x:hidden;
+}
+
+/* =======================================
+PAGE
+======================================= */
+
+.estate-page-container{
+  width:100%;
+  min-height:100vh;
+  background:#f5f7fa;
+}
+
+/* =======================================
+HERO SECTION
+======================================= */
+
+.estate-hero-section{
+  position:relative;
+
+  width:100%;
+  min-height:92vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:120px 7% 60px;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    135deg,
+    #eff6ff,
+    #ffffff,
+    #eef2ff
+  );
+}
+
+.estate-hero-section::before{
+  content:"";
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(37,99,235,0.12),
+    transparent 70%
+  );
+
+  top:-250px;
+  right:-150px;
+
+  border-radius:50%;
+}
+
+/* CONTENT */
+
+.estate-hero-left{
+  width:48%;
+  z-index:2;
+}
+
+.estate-mini-title{
+  color:#294f47;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.estate-hero-left h1{
+  font-size:68px;
+  line-height:1.1;
+  color:#3a6c5a;
+  margin-bottom:25px;
+  font-weight:700;
+}
+
+.estate-description-text{
+  font-size:17px;
+  line-height:1.8;
+  color:#6b7280;
+  max-width:560px;
+}
+
+/* BUTTONS */
+
+.estate-action-buttons{
+  margin-top:35px;
+
+  display:flex;
+  gap:18px;
+}
+
+.estate-primary-btn{
+  padding:15px 30px;
+
+  border:none;
+  border-radius:14px;
+
+  background:#6bac94;
+
+  color:white;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.estate-primary-btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.estate-secondary-btn{
+  padding:15px 30px;
+
+  border:2px solid #66b39a;
+
+  border-radius:14px;
+
+  background:white;
+
+  color:#000000;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.estate-secondary-btn:hover{
+  background:#63a8a2;
+  color:white;
+}
+
+/* HERO IMAGE */
+
+.estate-hero-right{
+  width:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2;
+}
+
+.estate-hero-image{
+  width:100%;
+  max-width:720px;
+  
+
+  object-fit:contain;
+
+  filter:
+  drop-shadow(
+    0 30px 40px rgba(0,0,0,0.15)
+  );
+}
+
+/* =======================================
+HEADING
+======================================= */
+
+.estate-main-heading{
+  text-align:center;
+
+  font-size:44px;
+  font-weight:700;
+
+  color:#111827;
+
+  margin-top:70px;
+  margin-bottom:40px;
+}
+
+/* =======================================
+WRAPPER
+======================================= */
+
+.estate-card-wrapper{
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:35px;
+
+  padding:0 60px 60px;
+}
+
+/* =======================================
+CARD
+======================================= */
+
+.estate-card-box{
+  width:100%;
+  max-width:1350px;
+
+  margin:auto;
+
+  display:flex;
+
+  background:white;
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+.estate-card-box:hover{
+  transform:translateY(-6px);
+}
+
+/* =======================================
+LEFT IMAGES
+======================================= */
+
+.estate-image-gallery{
+  width:45%;
+
+  display:flex;
+
+  gap:6px;
+
+  padding:6px;
+
+  background:#eef2f7;
+}
+
+.estate-main-image-box{
+  width:72%;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.estate-main-image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.estate-main-image-box img:hover{
+  transform:scale(1.05);
+}
+
+/* SIDE */
+
+.estate-side-image-group{
+  width:28%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:6px;
+}
+
+.estate-side-image-group img{
+  width:100%;
+  height:33.3%;
+
+  object-fit:cover;
+
+  border-radius:16px;
+
+  transition:0.4s;
+}
+
+.estate-side-image-group img:hover{
+  transform:scale(1.04);
+}
+
+/* =======================================
+DETAILS
+======================================= */
+
+.estate-content-section{
+  width:55%;
+
+  padding:35px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.estate-content-section h2{
+  font-size:32px;
+  color:#111827;
+}
+
+.estate-property-title{
+  margin-top:10px;
+
+  font-size:23px;
+
+  color:#4b5563;
+
+  font-weight:500;
+
+  line-height:1.5;
+}
+
+/* =======================================
+PRICE
+======================================= */
+
+.estate-price-info{
+  margin-top:28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
+
+  padding:24px 0;
+
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.estate-price-info div{
+  flex:1;
+}
+
+.estate-price-info h1{
+  font-size:38px;
+  color:#111827;
+}
+
+.estate-price-info h2{
+  font-size:26px;
+  color:#111827;
+}
+
+.estate-price-info p{
+  margin-top:5px;
+  color:#6b7280;
+}
+
+/* =======================================
+HIGHLIGHTS
+======================================= */
+
+.estate-feature-section{
+  margin-top:24px;
+}
+
+.estate-feature-section h4{
+  margin-bottom:14px;
+  font-size:18px;
+  color:#111827;
+}
+
+.estate-feature-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.estate-feature-list span{
+  background:#f3f4f6;
+
+  padding:10px 16px;
+
+  border-radius:12px;
+
+  font-size:14px;
+  font-weight:500;
+
+  color:#374151;
+}
+
+/* =======================================
+DESCRIPTION
+======================================= */
+
+.estate-property-description{
+  margin-top:22px;
+
+  color:#4b5563;
+
+  line-height:1.8;
+
+  font-size:15px;
+}
+
+/* =======================================
+BOTTOM
+======================================= */
+
+.estate-footer-row{
+  margin-top:35px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.estate-owner-label{
+  color:#6b7280;
+  margin-bottom:6px;
+}
+
+.estate-footer-row h3{
+  color:#111827;
+  font-size:22px;
+}
+
+/* =======================================
+BUTTONS
+======================================= */
+
+.estate-button-group{
+  display:flex;
+  gap:15px;
+}
+
+.estate-whatsapp-btn{
+  padding:14px 24px;
+
+  border:none;
+  border-radius:14px;
+
+  background:#25D366;
+
+  color:white;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.estate-whatsapp-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 10px 24px rgba(37,211,102,0.25);
+}
+
+.estate-contact-btn{
+  padding:14px 24px;
+
+  border:none;
+  border-radius:14px;
+
+  background:#538272;
+
+  color:white;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.estate-contact-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 10px 24px rgba(37,99,235,0.25);
+}
+
+/* =======================================
+RESPONSIVE
+======================================= */
+
+@media(max-width:1100px){
+
+  .estate-hero-section{
+    flex-direction:column;
+    text-align:center;
+    padding-top:140px;
+  }
+
+  .estate-hero-left{
+    width:100%;
+  }
+
+  .estate-hero-left h1{
+    font-size:52px;
+  }
+
+  .estate-description-text{
+    margin:auto;
+  }
+
+  .estate-action-buttons{
+    justify-content:center;
+  }
+
+  .estate-hero-right{
+    width:100%;
+    margin-top:40px;
+  }
+
+  .estate-card-box{
+    flex-direction:column;
+  }
+
+  .estate-image-gallery,
+  .estate-content-section{
+    width:100%;
+  }
+
+  .estate-image-gallery{
+    height:400px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .estate-card-wrapper{
+    padding:0 20px 40px;
+  }
+
+  .estate-main-heading{
+    font-size:34px;
+  }
+
+  .estate-hero-left h1{
+    font-size:38px;
+  }
+
+  .estate-image-gallery{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .estate-main-image-box{
+    width:100%;
+    height:260px;
+  }
+
+  .estate-side-image-group{
+    width:100%;
+    flex-direction:row;
+  }
+
+  .estate-side-image-group img{
+    width:33.3%;
+    height:100px;
+  }
+
+  .estate-price-info{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .estate-footer-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .estate-button-group{
+    width:100%;
+    flex-direction:column;
+  }
+
+  .estate-whatsapp-btn,
+  .estate-contact-btn{
+    width:100%;
+  }
+
+}

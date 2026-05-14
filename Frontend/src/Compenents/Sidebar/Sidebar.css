@@ -1,0 +1,73 @@
+/* ===== SIDEBAR ===== */
+
+.admin-sidebar-container {
+  width: 260px;
+  height: 100vh;
+  background: #000;
+  border-right: 1px solid #222;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+
+.admin-brand-logo {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* ===== NAVIGATION ===== */
+
+.sidebar-navigation-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-navigation-menu a {
+  text-decoration: none;
+  color: #aaa;
+  padding: 14px 18px;
+  border-radius: 14px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+
+.sidebar-navigation-menu a:hover {
+  background: #111;
+  color: #fff;
+  border-color: #333;
+  transform: translateX(4px);
+}
+
+.sidebar-link-active {
+  background: #fff;
+  color: #000 !important;
+  font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+
+.sidebar-footer-text {
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .admin-sidebar-container {
+    display: none;
+  }
+}

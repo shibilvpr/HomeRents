@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND (LIKE IMAGE UI FRAME) */
+/* body {
+  font-family: "Poppins", sans-serif;
+  background: #2f5d50; 
+} */
+
+/* MAIN CARD WRAPPER */
+.dorm-wrapper {
+  background: #f7f7f5;
+  max-width: 1300px;
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+/* ================= BUTTONS ================= */
+.green-btn {
+  background: #2f5d50;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.green-btn:hover {
+  background: #24463d;
+}
+
+.outline-btn {
+  padding: 12px 26px;
+  border: 1px solid #2f5d50;
+  background: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #2f5d50;
+}
+
+/* ================= HERO ================= */
+.villa-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.villa-left h1 {
+  font-size: 44px;
+  line-height: 1.3;
+  color: #1f3d35;
+}
+
+.villa-left p {
+  margin: 20px 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.villa-right img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ================= PROJECT SECTION ================= */
+.villa-project {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1.4fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.villa-small-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.villa-big-img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.villa-text h2 {
+  font-size: 30px;
+  color: #1f3d35;
+}
+
+.villa-text p {
+  margin: 15px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ================= FEATURE STRIP ================= */
+.dorm-feature {
+  background: #2f5d50;
+  color: white;
+}
+
+.feature-content {
+  max-width: 600px;
+}
+
+.dorm-feature h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.dorm-feature p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* ================= GALLERY ================= */
+.dorm-gallery {
+  text-align: center;
+}
+
+.dorm-gallery h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #1f3d35;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .villa-hero,
+  .villa-project {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 60px 20px;
+  }
+}
+
+.links{
+    border-radius: 30px;
+    background-color: #24463d;
+}
+
+/* // 3 links model */
+/* REMOVE DEFAULT LINK STYLE */
+a {
+  text-decoration: none;
+}
+
+/* UNIVERSAL BUTTON LINK STYLE */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* GREEN BUTTON */
+.green-btn {
+  background: #2f5d50;
+  color: white;
+  border: none;
+}
+
+.green-btn:hover {
+  background: #24463d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* OUTLINE BUTTON */
+.outline-btn {
+  border: 1px solid #2f5d50;
+  color: #2f5d50;
+  background: transparent;
+}
+
+.outline-btn:hover {
+  background: #2f5d50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-links span a.active {
+  background: #2f5d50;
+  color: white;
+}

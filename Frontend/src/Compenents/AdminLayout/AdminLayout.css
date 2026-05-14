@@ -1,0 +1,213 @@
+/* ====================================
+   MAIN LAYOUT
+==================================== */
+
+.control-panel-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #000;
+}
+
+/* ====================================
+   SIDEBAR
+==================================== */
+
+.control-sidebar-wrapper {
+  width: 260px;
+  min-width: 260px;
+  background: #050505;
+  border-right: 1px solid #1f1f1f;
+  color: #fff;
+  padding: 28px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.3s ease;
+}
+
+/* ====================================
+   LOGO
+==================================== */
+
+.control-sidebar-logo {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+
+/* ====================================
+   NAVIGATION
+==================================== */
+
+.control-navigation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.control-navigation-list li {
+  margin-bottom: 14px;
+}
+
+.control-navigation-list li a {
+  display: block;
+  text-decoration: none;
+  color: #b5b5b5;
+  background: #0d0d0d;
+  border: 1px solid #1f1f1f;
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* HOVER */
+
+.control-navigation-list li a:hover {
+  background: #fff;
+  color: #000;
+  transform: translateX(4px);
+}
+
+/* ====================================
+   SIDEBAR FOOTER
+==================================== */
+
+.control-sidebar-footer {
+  border-top: 1px solid #1f1f1f;
+  padding-top: 20px;
+}
+
+.control-sidebar-footer p {
+  color: #d4d4d4;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ====================================
+   LOGOUT BUTTON
+==================================== */
+
+.control-sidebar-footer button {
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.control-sidebar-footer button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ====================================
+   MAIN CONTENT
+==================================== */
+
+.control-main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  background: #000;
+  padding: 35px;
+  overflow-y: auto;
+}
+
+/* ====================================
+   LIGHT MODE
+==================================== */
+
+body.light-mode .control-panel-layout {
+  background: #f5f5f5;
+}
+
+body.light-mode .control-sidebar-wrapper {
+  background: #fff;
+  border-right: 1px solid #dcdcdc;
+  color: #000;
+}
+
+body.light-mode .control-sidebar-logo {
+  color: #000;
+}
+
+body.light-mode .control-navigation-list li a {
+  background: #f5f5f5;
+  border: 1px solid #dcdcdc;
+  color: #333;
+}
+
+body.light-mode
+  .control-navigation-list
+  li
+  a:hover {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .control-sidebar-footer {
+  border-top: 1px solid #dcdcdc;
+}
+
+body.light-mode .control-sidebar-footer p {
+  color: #444;
+}
+
+body.light-mode .control-sidebar-footer button {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+body.light-mode
+  .control-sidebar-footer
+  button:hover {
+  background: #fff;
+  color: #000;
+}
+
+body.light-mode .control-main-content {
+  background: #f5f5f5;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width: 900px) {
+  .control-sidebar-wrapper {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .control-main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .control-sidebar-wrapper {
+    display: none;
+  }
+
+  .control-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
