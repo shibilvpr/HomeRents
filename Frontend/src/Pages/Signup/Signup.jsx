@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import Input from "../../Compenents/Input/Input";
+const api = import.meta.env.VITE_API_URL;
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -22,7 +23,7 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/signup",
+        `${API}/signup`,
         form
       );
 

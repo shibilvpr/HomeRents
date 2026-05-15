@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AdminLayout from "../../Compenents/AdminLayout/AdminLayout";
+const api = import.meta.env.VITE_API_URL;
 
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    const res = await axios.get("http://localhost:5000/api/admin/users");
+    const res = await axios.get(`${API}/api/admin/users`);
     setUsers(res.data);
   };
 
@@ -15,12 +16,12 @@ const ManageUsers = () => {
   }, []);
 
   const toggleBlock = async (id) => {
-    await axios.put(`http://localhost:5000/api/admin/block/${id}`);
+    await axios.put(`${API}/api/admin/block/${id}`);
     fetchUsers();
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:5000/api/admin/user/${id}`);
+    await axios.delete(`${API}/api/admin/user/${id}`);
     fetchUsers();
   };
 

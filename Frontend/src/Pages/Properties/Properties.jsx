@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import "./Properties.css";
 import Navbar from "../../Compenents/Navbar/Navbar";
+const api = import.meta.env.VITE_API_URL;
 
 const OwnerProductAdd = ({ onSuccess }) => {
 
@@ -218,7 +219,7 @@ const OwnerProductAdd = ({ onSuccess }) => {
       });
 
       await axios.post(
-        "http://localhost:5000/api/properties",
+        `${API}/api/properties`,
         data,
         {
           headers: {

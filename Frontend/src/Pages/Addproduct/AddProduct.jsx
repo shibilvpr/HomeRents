@@ -4,6 +4,7 @@ import Input from "../../Compenents/Input/Input";
 import "./AddProduct.css";
 import Dashboard from "../Dashboard/Dashboard";
 import Sidebar from "../../Compenents/Sidebar/Sidebar";
+const api = import.meta.env.VITE_API_URL;
 
 const AddProduct = () => {
   const [form, setForm] = useState({
@@ -35,7 +36,7 @@ const AddProduct = () => {
       data.append("description", form.description);
       data.append("image", image);
 
-      await axios.post("http://localhost:5000/api/products/add", data);
+      await axios.post(`${API}/api/products/add`, data);
 
       alert("✅ Product Added");
 

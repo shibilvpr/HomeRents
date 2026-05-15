@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+const api = import.meta.env.VITE_API_URL;
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -7,7 +8,7 @@ const MyBookings = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/bookings/${user._id}`)
+      .get(`${API}/api/bookings/${user._id}`)
       .then((res) => setBookings(res.data.bookings));
   }, []);
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RecycleBin.css";
 import Sidebar from "../../Compenents/Sidebar/Sidebar";
+const api = import.meta.env.VITE_API_URL;
 
 const RecycleBin = () => {
   const [deletedItems, setDeletedItems] = useState([]);
@@ -11,7 +12,7 @@ const RecycleBin = () => {
   const loadDeletedProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/products/deleted"
+        `${API}/api/products/deleted`
       );
 
       setDeletedItems(response.data?.products || []);
@@ -30,7 +31,7 @@ const RecycleBin = () => {
   const restoreProduct = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/products/restore/${id}`
+        `${API}/api/products/restore/${id}`
       );
 
       loadDeletedProducts();
@@ -43,7 +44,7 @@ const RecycleBin = () => {
   const deleteForever = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/products/permanent/${id}`
+        `${API}/api/products/permanent/${id}`
       );
 
       loadDeletedProducts();
@@ -87,7 +88,7 @@ const RecycleBin = () => {
                 className="deleted-product-image"
                 src={
                   product.image
-                    ? `http://localhost:5000/images/${product.image}`
+                    ? `${API}/images/${product.image}`
                     : "https://via.placeholder.com/150"
                 }
                 alt={product.name}

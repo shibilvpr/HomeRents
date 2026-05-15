@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Favorites.css";
 import Navbar from "../../Compenents/Navbar/Navbar";
+const api = import.meta.env.VITE_API_URL;
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
@@ -20,7 +21,7 @@ const Favorites = () => {
         }
 
         const res = await axios.get(
-          `http://localhost:5000/api/favorites/${user._id}`
+          `${API}/api/favorites/${user._id}`
         );
 
         setFavorites(res.data?.favorites || []);
@@ -56,7 +57,7 @@ const Favorites = () => {
               <img
                 src={
                   item.image
-                    ? `http://localhost:5000/images/${item.image}`
+                    ? `${API}/images/${item.image}`
                     : "https://via.placeholder.com/300"
                 }
                 alt={item.name}

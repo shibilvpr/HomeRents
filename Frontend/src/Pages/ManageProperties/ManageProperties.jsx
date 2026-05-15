@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+const api = import.meta.env.VITE_API_URL;
 
 const ManageProperties = () => {
   const [listings, setListings] = useState([]);
 
   const fetchListings = async () => {
-    const res = await axios.get("http://localhost:5000/api/admin/listings");
+    const res = await axios.get(`${API}/api/admin/listings`);
     setListings(res.data);
   };
 
@@ -15,12 +15,12 @@ const ManageProperties = () => {
   }, []);
 
   const updateStatus = async (id, status) => {
-    await axios.put(`http://localhost:5000/api/admin/listings/${id}`, { status });
+    await axios.put(`${API}/api/admin/listings/${id}`, { status });
     fetchListings();
   };
 
   const deleteListing = async (id) => {
-    await axios.delete(`http://localhost:5000/api/admin/listings/${id}`);
+    await axios.delete(`${API}/api/admin/listings/${id}`);
     fetchListings();
   };
 

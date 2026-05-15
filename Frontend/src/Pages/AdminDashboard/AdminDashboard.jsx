@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
+const api = import.meta.env.VITE_API_URL;
 
 const AdminDashboard = () => {
   const [dashboardData, setDashboardData] =
@@ -10,7 +11,7 @@ const AdminDashboard = () => {
     const loadDashboardStats = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/admin/stats"
+          `${API}/admin/stats`
         );
 
         setDashboardData(response.data);

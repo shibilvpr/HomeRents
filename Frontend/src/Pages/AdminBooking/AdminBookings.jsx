@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminBookings.css";
+const api = import.meta.env.VITE_API_URL;
 
 const AdminBookings = () => {
   const [bookings, setBookings] = useState([]);
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/bookings");
+      const res = await axios.get(`${API}/api/admin/bookings`);
       setBookings(res.data.bookings || []);
     } catch (err) {
       console.log(err);
@@ -21,7 +22,7 @@ const AdminBookings = () => {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/bookings/${id}`,
+        `${API}/api/admin/bookings/${id}`,
         { status }
       );
       fetchData();

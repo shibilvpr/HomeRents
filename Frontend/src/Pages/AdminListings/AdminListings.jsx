@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminListings.css";
+const api = import.meta.env.VITE_API_URL;
 
 const AdminListings = () => {
   const [listings, setListings] = useState([]);
 
   const fetchListings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/listings");
+      const res = await axios.get(`${API}/listings`);
       setListings(res.data);
     } catch (err) {
       console.log(err);
@@ -19,12 +20,12 @@ const AdminListings = () => {
   }, []);
 
   const updateStatus = async (id, status) => {
-    await axios.put(`http://localhost:5000/listings/${id}`, { status });
+    await axios.put(`${API}/listings/${id}`, { status });
     fetchListings();
   };
 
   const deleteItem = async (id) => {
-    await axios.delete(`http://localhost:5000/listings/${id}`);
+    await axios.delete(`${API}/listings/${id}`);
     fetchListings();
   };
 
@@ -53,7 +54,7 @@ const AdminListings = () => {
                   {/* IMAGE */}
                   <td>
                     <img
-                      src={`http://localhost:5000/uploads/${item.image}`}
+                      src={`${API}/uploads/${item.image}`}
                       alt="listing"
                       className="listing-img"
                     />

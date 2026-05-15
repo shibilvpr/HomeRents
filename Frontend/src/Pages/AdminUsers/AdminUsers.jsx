@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminUsers.css";
+const api = import.meta.env.VITE_API_URL;
 
 const AdminUsers = () => {
   const [allUsers, setAllUsers] = useState([]);
@@ -15,7 +16,7 @@ const AdminUsers = () => {
   const loadUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/users"
+        `${API}/users`
       );
 
       console.log("USERS:", response.data);
@@ -42,7 +43,7 @@ const AdminUsers = () => {
   const handleUserBlock = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/users/block/${id}`
+        `${API}/users/block/${id}`
       );
 
       setAllUsers((previousUsers) =>
@@ -118,7 +119,7 @@ const AdminUsers = () => {
                       <img
                         src={
                           user.image
-                            ? `http://localhost:5000/uploads/${user.image}`
+                            ? `${API}/uploads/${user.image}`
                             : "https://cdn-icons-png.flaticon.com/512/149/149071.png"
                         }
                         alt="user"

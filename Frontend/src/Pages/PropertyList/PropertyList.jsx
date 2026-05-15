@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import "./PropertyList.css";
+const api = import.meta.env.VITE_API_URL;
 
 
 import Navbar from "../../Compenents/Navbar/Navbar";
@@ -27,7 +28,7 @@ const PropertyList = () => {
 
       const response =
         await axios.get(
-          "http://localhost:5000/api/properties"
+          `${API}/api/properties`
         );
 
       setEstateData(response.data);
@@ -180,7 +181,7 @@ const PropertyList = () => {
                 <img
                   src={
                     property.images?.[0]
-                      ? `http://localhost:5000/images/${property.images[0]}`
+                      ? `${API}/images/${property.images[0]}`
                       : "https://via.placeholder.com/500"
                   }
                   alt=""
@@ -198,7 +199,7 @@ const PropertyList = () => {
 
                     <img
                       key={i}
-                      src={`http://localhost:5000/images/${image}`}
+                      src={`${API}/images/${image}`}
                       alt=""
                     />
 

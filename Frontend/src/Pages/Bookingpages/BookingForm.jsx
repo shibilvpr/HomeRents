@@ -3,6 +3,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./BookingForm.css";
 import Navbar from "../../Compenents/Navbar/Navbar";
+const api = import.meta.env.VITE_API_URL;
 
 const BookingForm = ({ property }) => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -31,7 +32,7 @@ const BookingForm = ({ property }) => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/bookings", {
+      await axios.post(`${API}/api/bookings`, {
         ...form,
         userId: user._id,
         propertyId: property?._id || null,

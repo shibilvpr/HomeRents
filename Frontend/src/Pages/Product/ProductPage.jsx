@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ProductPage.css";
+const api = import.meta.env.VITE_API_URL;
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -14,7 +15,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get(`${API}/api/products`);
         setProducts(res.data.products || []);
       } catch (err) {
         console.log(err);
@@ -31,7 +32,7 @@ const ProductPage = () => {
         if (!user?._id) return;
 
         const res = await axios.get(
-          `http://localhost:5000/api/favorites/${user._id}`
+          `${API}/api/favorites/${user._id}`
         );
 
         setFavorites(res.data.favorites || []);
@@ -52,7 +53,7 @@ const ProductPage = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/favorites",
+        `${API}/api/favorites`,
         {
           userId: user._id,
           product,
@@ -102,7 +103,7 @@ const ProductPage = () => {
                 <img
                   src={
                     item.image
-                      ? `http://localhost:5000/images/${item.image}`
+                      ? `${API}/images/${item.image}`
                       : "https://via.placeholder.com/200"
                   }
                   alt={item.name}

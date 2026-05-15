@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 import AdminSidebar from "../../Compenents/Sidebar/Sidebar";
+const api = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
   const [items, setItems] = useState([]);
@@ -20,7 +21,7 @@ const Dashboard = () => {
   const loadProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        `${API}/api/products`
       );
 
       setItems(response.data.products);
@@ -37,7 +38,7 @@ const Dashboard = () => {
   const removeProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`
+        `${API}/api/products/${id}`
       );
 
       loadProducts();
@@ -64,7 +65,7 @@ const Dashboard = () => {
   const updateProduct = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/products/${selectedItem._id}`,
+        `${API}/api/products/${selectedItem._id}`,
         selectedItem
       );
 
@@ -143,7 +144,7 @@ const Dashboard = () => {
                     <td>
                       <img
                         className="table-image"
-                        src={`http://localhost:5000/images/${product.image}`}
+                        src={`${API}/images/${product.image}`}
                         alt=""
                       />
                     </td>
