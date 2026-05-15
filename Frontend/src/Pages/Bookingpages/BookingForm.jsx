@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./BookingForm.css";
 import Navbar from "../../Compenents/Navbar/Navbar";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const BookingForm = ({ property }) => {
   const user = JSON.parse(localStorage.getItem("user"));

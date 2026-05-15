@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Favorites.css";
 import Navbar from "../../Compenents/Navbar/Navbar";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);

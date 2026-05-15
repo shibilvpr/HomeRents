@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import "./PropertyList.css";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 
 import Navbar from "../../Compenents/Navbar/Navbar";

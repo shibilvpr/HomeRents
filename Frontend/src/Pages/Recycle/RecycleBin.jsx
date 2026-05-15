@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RecycleBin.css";
 import Sidebar from "../../Compenents/Sidebar/Sidebar";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const RecycleBin = () => {
   const [deletedItems, setDeletedItems] = useState([]);

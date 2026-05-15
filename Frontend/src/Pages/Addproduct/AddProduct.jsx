@@ -4,7 +4,7 @@ import Input from "../../Compenents/Input/Input";
 import "./AddProduct.css";
 import Dashboard from "../Dashboard/Dashboard";
 import Sidebar from "../../Compenents/Sidebar/Sidebar";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const AddProduct = () => {
   const [form, setForm] = useState({

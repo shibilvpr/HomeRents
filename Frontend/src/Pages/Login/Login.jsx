@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"; // ✅ ADD
 import "./Login.css";
 import Input from "../../Compenents/Input/Input";
-const api = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const Login = () => {
     const [form, setForm] = useState({
