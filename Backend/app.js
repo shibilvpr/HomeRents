@@ -1,3 +1,6 @@
+import dns from 'dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 import dotenv from "dotenv";
 dotenv.config(); // ✅ MUST BE FIRST
 
@@ -41,6 +44,7 @@ console.log("DB URL:", process.env.DB_url);
 
 mongoose
   .connect(process.env.DB_url)
+  // .connect(process.env.ATLAS_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
