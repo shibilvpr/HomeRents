@@ -23,7 +23,7 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        `${API}/signup`,
+        `${api}/signup`,
         form
       );
 
