@@ -1,115 +1,256 @@
+/* =========================
+   NAVBAR WRAPPER
+========================= */
 
-/* ================= WRAPPER ================= */
 .navbar-wrapper {
   width: 100%;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 1000;
+
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  z-index: 100;
 }
+
+/* =========================
+   MAIN NAVBAR
+========================= */
+
 .navbar {
-  min-height: 60px;
-  position: fixed;
+  width: 92%;
+  max-width: 1400px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
 
-  width: fit-content;
+/* =========================
+   COMMON GROUP STYLE
+========================= */
 
-  /* ✅ ADD THIS */
-  padding: 0 35px;
+.nav-group {
+  display: flex;
+  align-items: center;
+
+  padding: 14px 24px;
 
   border-radius: 60px;
 
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
+
+  backdrop-filter: blur(15px);
 
   border: 1px solid rgba(255, 255, 255, 0.15);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* FLOAT EFFECT */
-.navbar:hover {
-  transform: translateY(-3px);
-}
+/* =========================
+   LOGO GROUP
+========================= */
 
-/* ================= LINKS ================= */
-.nav-links {
-  display: flex;
-  align-items: center;
-
-  /* ✅ reduce gap slightly */
-  gap: 35px;
-
-  list-style: none;
+.logo-group h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
   margin: 0;
-
-  /* ✅ IMPORTANT */
-  padding: 10px 5px;
 }
 
-.nav-links li {
-  color: #000000;
-  font-size: 16px;
-  font-weight: 400;
+/* =========================
+   CENTER MENU
+========================= */
 
-  /* ✅ ADD THIS */
-  padding: 8px 4px;
+.center-group {
+  gap: 35px;
+}
+
+.center-group li {
+  list-style: none;
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
 
   position: relative;
-}
-/* HOVER */
-.nav-links li:hover {
-  color: #888383;
+
+  transition: 0.3s;
 }
 
-/* ACTIVE */
-.nav-links li.active {
-  color: #000000;
-  font-weight: 500;
+/* HOVER */
+
+.center-group li:hover {
+  color: #7c4dff;
 }
 
 /* UNDERLINE */
-.nav-links li::after {
+
+.center-group li::after {
   content: "";
+
   position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #7c4dff;
+
   left: 0;
   bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #7c4dff;
+
   transition: 0.3s;
-  border-radius: 2px;
 }
 
-.nav-links li:hover::after,
-.nav-links li.active::after {
+.center-group li:hover::after {
   width: 100%;
 }
 
-.nav-btn {
-  border-radius: 10px;
-  width: 70px;
-  height: 30px;
-  background-color: rgb(255, 21, 0);
+/* =========================
+   RIGHT GROUP
+========================= */
+
+.right-group {
+  gap: 15px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+/* =========================
+   BUTTON
+========================= */
+
+.nav-btn {
+  width: 90px;
+  height: 38px;
+
+  border: none;
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+    opacity: 1;
+  backdrop-filter: none;
+
+  transition: 0.3s;
+}
+
+.login {
+  background: #7c4dff;
+}
+
+.logout {
+  background: rgb(255, 40, 40);
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+
+  background: #000;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .center-group {
+    position: absolute;
+
+    top: 90px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    display: none;
+  }
+
+  .center-group.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .center-group li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
   .navbar {
-    min-height: 50px;
-    padding: 0 20px;
+    width: 95%;
   }
 
-  .nav-links {
-    gap: 20px;
+  .nav-group {
+    padding: 12px 18px;
   }
 
-  .nav-links li {
+  .logo-group h2 {
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    width: 75px;
+    height: 34px;
     font-size: 13px;
   }
 }
