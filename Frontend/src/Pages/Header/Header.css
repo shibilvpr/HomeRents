@@ -1,5 +1,5 @@
-
 /* RESET */
+
 *{
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   text-align: center;
   padding: 40px 20px;
@@ -20,15 +21,17 @@ body {
 }
 
 /* IMAGE CONTAINER */
+
 .hero-image {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 180px;
   width: 100%;
 }
 
 /* IMAGE */
+
 .wave-img {
   width: 100%;
   max-width: 950px;
@@ -36,7 +39,8 @@ body {
   display: block;
 }
 
-/* PERFECT CENTER OVERLAY */
+/* OVERLAY */
+
 .overlay-content {
   position: absolute;
   top: 10%;
@@ -54,15 +58,15 @@ body {
 }
 
 /* TITLE */
+
 .overlay-content h1 {
   font-size: 68px;
   line-height: 1.05;
   letter-spacing: -1px;
-  margin: 0;
-  /* font-family: 'Playfair Display', serif; */
 }
 
 /* COLORS */
+
 .dark {
   color: #2f3e2f;
 }
@@ -72,6 +76,7 @@ body {
 }
 
 /* BUTTON */
+
 .floating-btn {
   cursor: pointer;
   background: #5c7a5c;
@@ -91,6 +96,7 @@ body {
 }
 
 /* SEARCH BAR */
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -100,12 +106,11 @@ body {
   padding: 6px;
 
   width: 420px;
-  max-width: 90%;
+  max-width: 100%;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* INPUT */
 .search-bar input {
   flex: 1;
   border: none;
@@ -115,7 +120,6 @@ body {
   font-size: 14px;
 }
 
-/* BUTTON */
 .search-bar button {
   background: #5c7a5c;
   color: white;
@@ -126,29 +130,29 @@ body {
   font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* =========================
+   LAPTOP
+========================= */
 
-/* LAPTOP */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+
+  .overlay-content h1 {
+    font-size: 56px;
+  }
 
   .hero-image {
     margin-top: 150px;
   }
-
-  .overlay-content h1 {
-    font-size: 50px;
-  }
-
-  .search-bar {
-    width: 380px;
-  }
 }
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 768px) {
 
   .hero {
-    padding: 100px 15px;
+    padding: 80px 15px;
   }
 
   .hero-image {
@@ -156,8 +160,8 @@ body {
   }
 
   .overlay-content {
+    top: 14%;
     width: 95%;
-    gap: 14px;
   }
 
   .overlay-content h1 {
@@ -165,23 +169,20 @@ body {
     line-height: 1.1;
   }
 
-  .floating-btn {
-    padding: 11px 26px;
-    font-size: 11px;
-  }
-
   .search-bar {
-    display: none;
-    /* width: 100%;
-    max-width: 340px; */
+    width: 100%;
+    max-width: 340px;
   }
 
-  .search-bar input {
-    font-size: 13px;
+  .floating-btn {
+    padding: 10px 24px;
   }
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
 
   .hero-image {
@@ -189,7 +190,7 @@ body {
   }
 
   .overlay-content {
-    width: 95%;
+    top: 18%;
     gap: 12px;
   }
 
@@ -199,11 +200,12 @@ body {
   }
 
   .floating-btn {
-    padding: 10px 22px;
+    padding: 10px 20px;
     font-size: 11px;
   }
 
   .search-bar {
+    display: none;
     flex-direction: column;
     background: transparent;
     box-shadow: none;
@@ -223,7 +225,10 @@ body {
   }
 }
 
-/* SMALL MOBILE */
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 400px) {
 
   .overlay-content h1 {
@@ -231,7 +236,6 @@ body {
   }
 
   .search-bar input {
-    padding: 11px 14px;
     font-size: 12px;
   }
 
