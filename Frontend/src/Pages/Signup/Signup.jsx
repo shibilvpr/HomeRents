@@ -38,7 +38,7 @@ const Signup = () => {
       } else if (role === "owner") {
         navigate("/dashboard");
       } else {
-        navigate("/header");
+        navigate("/");
       }
     } catch (err) {
       alert(err.response?.data?.message);
